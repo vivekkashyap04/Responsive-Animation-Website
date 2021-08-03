@@ -1,0 +1,33 @@
+@import "reset";
+@import "general";
+@import "var";
+@import "media";
+
+#header {
+  padding: 10px 0;
+}
+
+#header .logo {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $primary;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  color: $secondary;
+}
+.nav a:hover,
+.nav a.active {
+  background-color: $primary;
+  color: white;
+}
