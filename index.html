@@ -7,7 +7,7 @@
   </head>
   <body>
     <header id="header">
-      <div class="flex container">
+      <div class="flex">
         <a href="#index.html" class="logo">Adventure</a>
         <nav class="nav">
           <ul class="flex">
@@ -19,5 +19,44 @@
         </nav>
       </div>
     </header>
+    <section>
+      <h2 id="text"><span>It's time for a new</span><br />Adventure</h2>
+      <img src="assets/bird1.png" alt="bird1" />
+      <img src="assets/bird2.png" alt="bird2" />
+      <img src="assets/forest.png" alt="forest" />
+      <a href="#" id="btn">Explore</a>
+      <img src="assets/rocks.png" id="rocks" />
+      <img src="assets/water.png" id="water" />
+    </section>
+    <div class="sec">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+        voluptates saepe dicta, non debitis placeat ipsam quos explicabo laborum
+        modi? Cum provident sint sapiente eaque doloremque maxime, molestias
+        enim reiciendis?
+      </p>
+    </div>
+    <script>
+      let text = document.getElementById("text");
+      let bird1 = document.getElementById("bird1");
+      let bird2 = document.getElementById("bird2");
+      let btn = document.getElementById("btn");
+      let forest = document.getElementById("forest");
+      let rocks = document.getElementById("rocks");
+      let water = document.getElementById("water");
+      let header = document.getElementById("header");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        text.style.top = 50 + value * -0.5 + "%";
+        bird1.style.top = value * -1.5 + "px";
+        bird1.style.left = value * 2 + "px";
+        bird2.style.top = value * -1.5 + "px";
+        bird2.style.left = value * -5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        rocks.style.top = value * -0.12 + "px";
+        forest.style.top = value * 0.25 + "px";
+        header.style.top = value * -0.5 + "px";
+      });
+    </script>
   </body>
 </html>
